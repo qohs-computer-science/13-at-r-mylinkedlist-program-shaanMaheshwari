@@ -24,15 +24,53 @@ public class MyLinkedList{
     public boolean add(Object newItem){
         ListNode temp = head;
         
+        int tempSize = temp.size();
+        boolean added = false;
         while(temp.getNext() != null){
             temp = temp.getNext();
         }
 
         temp.setNext(newItem); 
 
-        return temp;
+        if(tempSize != temp.size()){
+            added = true;
+        }
 
+        return added;
     }
+
+    public boolean addFirst(Object newItem){
+        ListNode temp = head;
+
+        temp.setNext(newItem);
+        
+        return true;
+    }
+
+    public boolean addLast(Object newItem){
+        ListNode temp = head;
+        
+        int tempSize = temp.size();
+        boolean added = false;
+        while(temp.getNext() != null){
+            temp = temp.getNext();
+        }
+
+        temp.setNext(newItem); 
+
+        if(tempSize != temp.size()){
+            added = true;
+        }
+
+        return added;
+    }
+
+    public Object get(int i){
+        
+
+        return index;
+    }
+
 
     public String toString(){
         ListNode temp = head;
