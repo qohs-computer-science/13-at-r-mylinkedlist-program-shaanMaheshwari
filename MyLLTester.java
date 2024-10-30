@@ -1,4 +1,4 @@
-public class MyLLTester.java {
+public class MyLLTester {
   public static void main(String [] args) {
     MyLinkedList myLL = new MyLinkedList();
     System.out.println("Initial size: " + myLL.size());
